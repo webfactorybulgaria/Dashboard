@@ -3,11 +3,11 @@
 namespace TypiCMS\Modules\Dashboard\Composers;
 
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Gate;
 use Maatwebsite\Sidebar\SidebarGroup;
 use Maatwebsite\Sidebar\SidebarItem;
-use TypiCMS\Modules\Core\Composers\BaseSidebarViewComposer;
 
-class SidebarViewComposer extends BaseSidebarViewComposer
+class SidebarViewComposer
 {
     public function compose(View $view)
     {
@@ -20,7 +20,7 @@ class SidebarViewComposer extends BaseSidebarViewComposer
                 $item->weight = config('typicms.dashboard.sidebar.weight');
                 $item->route('dashboard');
                 $item->authorize(
-                    $this->auth->hasAccess('dashboard')
+                    Gate::allows('dashboard')
                 );
             });
         });

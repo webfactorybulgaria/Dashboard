@@ -10,6 +10,17 @@ class AdminController extends BaseAdminController
     public function __construct(DashboardInterface $dashboard)
     {
         parent::__construct($dashboard);
+        $this->middleware('admin', ['except' => 'index']);
+    }
+
+    /**
+     * Redirect to dashboard.
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function index()
+    {
+        return redirect(route('dashboard'));
     }
 
     /**
@@ -21,15 +32,5 @@ class AdminController extends BaseAdminController
     {
         return view('dashboard::show')
             ->with('welcomeMessage', $this->repository->welcomeMessage());
-    }
-
-    /**
-     * Redirect to dashboard.
-     *
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function index()
-    {
-        return redirect(route('dashboard'));
     }
 }
