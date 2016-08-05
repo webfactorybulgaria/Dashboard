@@ -2,7 +2,7 @@
 
 namespace TypiCMS\Modules\Dashboard\Repositories;
 
-use TypiCMS\Modules\Core\Repositories\RepositoryInterface;
+use TypiCMS\Modules\Core\Custom\Repositories\RepositoryInterface;
 
 interface DashboardInterface extends RepositoryInterface
 {

@@ -2,8 +2,8 @@
 
 namespace TypiCMS\Modules\Dashboard\Http\Controllers;
 
-use TypiCMS\Modules\Core\Http\Controllers\BaseAdminController;
-use TypiCMS\Modules\Dashboard\Repositories\DashboardInterface;
+use TypiCMS\Modules\Core\Custom\Http\Controllers\BaseAdminController;
+use TypiCMS\Modules\Dashboard\Custom\Repositories\DashboardInterface;
 
 class AdminController extends BaseAdminController
 {

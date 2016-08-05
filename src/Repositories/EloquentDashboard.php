@@ -2,7 +2,7 @@
 
 namespace TypiCMS\Modules\Dashboard\Repositories;
 
-use TypiCMS\Modules\Core\Repositories\RepositoriesAbstract;
+use TypiCMS\Modules\Core\Custom\Repositories\RepositoriesAbstract;
 
 class EloquentDashboard extends RepositoriesAbstract implements DashboardInterface
 {
