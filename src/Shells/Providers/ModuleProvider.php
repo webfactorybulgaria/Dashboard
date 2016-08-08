@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\Dashboard\Custom\Providers;
+namespace TypiCMS\Modules\Dashboard\Shells\Providers;
 
 use TypiCMS\Modules\Dashboard\Providers\ModuleProvider as Base;
 

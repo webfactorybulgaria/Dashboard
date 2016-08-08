@@ -4,9 +4,9 @@ namespace TypiCMS\Modules\Dashboard\Providers;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use TypiCMS\Modules\Core\Custom\Services\Cache\LaravelCache;
-use TypiCMS\Modules\Dashboard\Custom\Repositories\CacheDecorator;
-use TypiCMS\Modules\Dashboard\Custom\Repositories\EloquentDashboard;
+use TypiCMS\Modules\Core\Shells\Services\Cache\LaravelCache;
+use TypiCMS\Modules\Dashboard\Shells\Repositories\CacheDecorator;
+use TypiCMS\Modules\Dashboard\Shells\Repositories\EloquentDashboard;
 
 class ModuleProvider extends ServiceProvider
 {
@@ -31,14 +31,14 @@ class ModuleProvider extends ServiceProvider
         /*
          * Register route service provider
          */
-        $app->register('TypiCMS\Modules\Dashboard\Custom\Providers\RouteServiceProvider');
+        $app->register('TypiCMS\Modules\Dashboard\Shells\Providers\RouteServiceProvider');
 
         /*
          * Sidebar view composer
          */
-        $app->view->composer('core::admin._sidebar', 'TypiCMS\Modules\Dashboard\Custom\Composers\SidebarViewComposer');
+        $app->view->composer('core::admin._sidebar', 'TypiCMS\Modules\Dashboard\Shells\Composers\SidebarViewComposer');
 
-        $app->bind('TypiCMS\Modules\Dashboard\Custom\Repositories\DashboardInterface', function (Application $app) {
+        $app->bind('TypiCMS\Modules\Dashboard\Shells\Repositories\DashboardInterface', function (Application $app) {
             $repository = new EloquentDashboard();
             if (!config('typicms.cache')) {
                 return $repository;

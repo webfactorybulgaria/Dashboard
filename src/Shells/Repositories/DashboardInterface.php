@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\Dashboard\Custom\Repositories;
+namespace TypiCMS\Modules\Dashboard\Shells\Repositories;
 
 use TypiCMS\Modules\Dashboard\Repositories\DashboardInterface as Base;
 

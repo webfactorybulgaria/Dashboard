@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\Dashboard\Custom\Http\Controllers;
+namespace TypiCMS\Modules\Dashboard\Shells\Http\Controllers;
 
 use TypiCMS\Modules\Dashboard\Http\Controllers\AdminController as Base;
 
