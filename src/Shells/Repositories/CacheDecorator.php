@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Dashboard\Shells\Repositories;
 
-use TypiCMS\Modules\Dashboard\Repositories\CacheDecorator as Base;
+use TypiCMS\Modules\Dashboard\Repositories\CacheDecorator as BaseClass;
 
-class CacheDecorator extends Base implements DashboardInterface
+class CacheDecorator extends BaseClass implements DashboardInterface
 {
 
 }

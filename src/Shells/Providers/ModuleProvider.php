@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Dashboard\Shells\Providers;
 
-use TypiCMS\Modules\Dashboard\Providers\ModuleProvider as Base;
+use TypiCMS\Modules\Dashboard\Providers\ModuleProvider as BaseClass;
 
-class ModuleProvider extends Base
+class ModuleProvider extends BaseClass
 {
 
 }

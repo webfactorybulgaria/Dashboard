@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Dashboard\Shells\Repositories;
 
-use TypiCMS\Modules\Dashboard\Repositories\DashboardInterface as Base;
+use TypiCMS\Modules\Dashboard\Repositories\DashboardInterface as BaseInterface;
 
-interface DashboardInterface extends Base
+interface DashboardInterface extends BaseInterface
 {
 
 }

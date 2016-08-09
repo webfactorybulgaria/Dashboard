@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Dashboard\Shells\Providers;
 
-use TypiCMS\Modules\Dashboard\Providers\RouteServiceProvider as Base;
+use TypiCMS\Modules\Dashboard\Providers\RouteServiceProvider as BaseClass;
 
-class RouteServiceProvider extends Base
+class RouteServiceProvider extends BaseClass
 {
 
 }
