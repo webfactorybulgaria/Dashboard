@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "webfactorybulgaria/core": "~4.1.0"
+        "webfactorybulgaria/core": "~5.3.1"
     },
     "autoload": {
         "psr-4": {

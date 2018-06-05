@@ -2,7 +2,7 @@
 
 namespace TypiCMS\Modules\Dashboard\Providers;
 
-use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Route;
 use TypiCMS\Modules\Core\Shells\Providers\BaseRouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
@@ -19,18 +19,16 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Define the routes for the application.
      *
-     * @param \Illuminate\Routing\Router $router
-     *
      * @return void
      */
-    public function map(Router $router)
+    public function map()
     {
-        $router->group(['namespace' => $this->namespace], function (Router $router) {
+        Route::group(['namespace' => $this->namespace], function () {
             /*
              * Admin routes
              */
-            $router->get('admin/dashboard', 'AdminController@dashboard')->name('dashboard');
-            $router->get('admin', 'AdminController@index');
+            Route::get('admin/dashboard', 'AdminController@dashboard')->name('dashboard');
+            Route::get('admin', 'AdminController@index');
         });
     }
 }
